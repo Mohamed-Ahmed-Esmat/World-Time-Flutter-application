@@ -14,16 +14,12 @@ class _HomeState extends State<Home> {
       body: SafeArea(
           child: Column(
         children: [
-          Row(
-            children: [
-              MaterialButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/location');
-                },
-                child: Icon(Icons.edit_location),
-              ),
-              Text("Edit Location")
-            ],
+          TextButton.icon(
+            onPressed: () {
+              Navigator.pushNamed(context, '/location');
+            },
+            icon: Icon(Icons.edit_location),
+            label: Text("Edit Location"),
           )
         ],
       )),
